@@ -100,7 +100,19 @@ module DatapathUnit (
     //PC_MUX instantiation
     MUX #(.WIDTH(32))   PC_MUX (.In1(PCPlus4), .In2(PCBranch), .sel(PCSrc), .Out(PC_in));
     
+    //inputs to PC_J_MUX
+    wire    [31:0] PC_JUMP;
+    //outputs to PC_J_MUX
+    wire    [31:0] PC_JIn;
+
+    assign PC_JUMP = {PCPlus4[31:28],Instr[25:0]<<2};
+    
+    //PC_J_MUX instantiation
+    MUX #(.WIDTH(32))   PC_J_MUX (.In1(PC_in), .In2(PC_JUMP), .sel(Jmp), .Out(PC_JIn));
+    
     //PC module
-    ProgramCounter PC1 (.CLK(CLK), .reset(reset), .PC_in(PC_in), .PC(PC));
+    ProgramCounter PC1 (.CLK(CLK), .reset(reset), .PC_in(PC_JIn), .PC(PC));
+
+
 
 endmodule
