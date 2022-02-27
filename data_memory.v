@@ -4,8 +4,8 @@ module data_memory (
     input 	wire			CLK,
 	input 	wire			reset,
 	input 	wire			WE,
-    output	wire	[31:0]  RD
-	output	wire	[15 : 0] test_value,
+    output	wire	[31:0]  RD,
+	output	wire	[15:0] 	test_value
 );
 
 	localparam MEMORY_SIZE = 100;

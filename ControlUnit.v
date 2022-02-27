@@ -26,7 +26,7 @@ module ControlUnit
     localparam  MUL =   6'b01_1100;
 
     reg     [1:0]   ALUOp;
-    reg             Branch,     //branch isn't output (It's PCSrc which chontrol the input of PC)
+    reg             Branch;     //branch isn't output (It's PCSrc which chontrol the input of PC)
     wire    [5:0]   OpCode;
     wire    [5:0]   Funct;
 
