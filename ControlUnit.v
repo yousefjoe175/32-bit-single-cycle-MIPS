@@ -1,11 +1,12 @@
 module ControlUnit
 (
     input   wire    [31:0]  Instruction,
+    input   wire            Zero,
 
     output  reg             Jmp,
     output  reg             MemtoReg,
     output  reg             MemWrite,
-    output  reg             Branch,
+    output  reg             PCSrc,
     output  reg             ALUSrc,
     output  reg             RegDst,
     output  reg             RegWrite,
@@ -25,9 +26,11 @@ module ControlUnit
     localparam  MUL =   6'b01_1100;
 
     reg     [1:0]   ALUOp;
-
+    reg             Branch,     //branch isn't output (It's PCSrc which chontrol the input of PC)
     wire    [5:0]   OpCode;
     wire    [5:0]   Funct;
+
+    
 
     assign  OpCode  =   Instruction [31 : 26];
     assign  Funct   =   Instruction [5 : 0];
@@ -133,4 +136,13 @@ module ControlUnit
                default  :   ALUControl  =   3'b010;
            endcase  
         end
+    
+     always @(*) 
+        begin
+            PCSrc = Branch & Zero;    
+        end
+
+
 endmodule
+
+   

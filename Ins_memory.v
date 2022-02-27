@@ -1,5 +1,5 @@
 module Ins_memory(
-    output reg  [31:0] 		Instr,
+    output reg  [31:0] 		Instruction,
     input  wire	[31:0]    	PC
 );
 	localparam MEMORY_SIZE = 100;
@@ -13,7 +13,7 @@ module Ins_memory(
 
 	always @(PC) 
 		begin
-			Instr = mem[PC>>4];
+			Instruction = mem[PC>>2];
 		end
 
 endmodule

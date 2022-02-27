@@ -5,6 +5,7 @@ module data_memory (
 	input 	wire			reset,
 	input 	wire			WE,
     output	wire	[31:0]  RD
+	output	wire	[15 : 0] test_value,
 );
 
 	localparam MEMORY_SIZE = 100;
@@ -30,5 +31,7 @@ module data_memory (
 				end
 		
 		end
+
+//needs to add the test_value functionality
 
 endmodule

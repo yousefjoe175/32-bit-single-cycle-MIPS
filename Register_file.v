@@ -1,14 +1,13 @@
 module Register_file(
     output	wire	[31 : 0] RD1,
     output	wire	[31 : 0] RD2,
-    output	wire	[15 : 0] test_value,
     input  	wire	[31 : 0] WD3,
     input  	wire	[ 5 : 0] A1,
     input  	wire	[ 5 : 0] A2,
     input  	wire	[ 5 : 0] A3,
     input   wire       		 CLK, 
     input   wire       		 WE3,
-    input   wire       		 reset,
+    input   wire       		 reset
 );
 
 	localparam 	FILE_SIZE = 32;
@@ -36,6 +35,6 @@ module Register_file(
 				end
 		end
 
-//needs to add the test_value functionality
+
 
 endmodule

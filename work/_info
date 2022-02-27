@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS
+vDatapathUnit
+!s110 1645967954
+!i10b 1
+!s100 2]7OlU^ke2`5bg>_fPNKM0
+I]UTX]fX<WXH1[<<3VIJ]71
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1645967949
+8.\DatapathUnit.v
+F.\DatapathUnit.v
+L0 5
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1645967954.000000
+!s107 .\DatapathUnit.v|
+!s90 .\DatapathUnit.v|
+!i113 1
+Z3 tCvgOpt 0
+n@datapath@unit
+vMUX
+!s110 1645955984
+!i10b 1
+!s100 c1QQ^1^XC2oTG?i2LOJcL0
+I2mZjkhj3o;e<YEWamPI[c1
+R1
+R0
+w1645955959
+8.\MUX.v
+F.\MUX.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1645955984.000000
+!s107 .\MUX.v|
+!s90 .\MUX.v|
+!i113 1
+R3
+n@m@u@x
