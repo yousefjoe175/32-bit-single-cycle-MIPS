@@ -56,35 +56,32 @@ module DatapathUnit (
     //inputs of ALU
     wire            [31:0]   SrcA;
     wire            [31:0]   SrcB;  //will be multuplexed between RD2 and signImm
-    //ALU instantiation
-    ALU AL1(.SrcA(SrcA), .SrcB(SrcB), .ALUControl(ALUControl), .Zero(Zero), .ALUResult(ALUResult) );     //note between the () is the current module port
-    //SrC A
-    assign  SrcA = RD1; //RD1 will 
-
-    //SrcB muxing 
-    wire            [31:0]  SignImm;
-    //SrcB_mux instantiation
-    MUX #(.WIDTH(32))   SrcB_mux (.In1(RD2), .In2(SignImm), .sel(ALUSrc), .Out(SrcB)); 
-   
-    assign WriteData = RD2;
-
+    
     //input of sign extension
     wire            [15:0]  Imm ;
     //output of sign extension
-    
+    wire            [31:0]  SignImm;
     //sign extenstion instnatiation
     SignExtend S1(
                     .Inst(Instr[15:0]),
                     .SignImm(SignImm)
     );
 
+    //SrC A
+    assign  SrcA = RD1; //RD1 will 
+
+    //SrcB_mux instantiation
+    MUX #(.WIDTH(32))   SrcB_mux (.In1(RD2), .In2(SignImm), .sel(ALUSrc), .Out(SrcB)); 
+    assign WriteData = RD2;
+
+    //ALU instantiation
+    ALU AL1(.SrcA(SrcA), .SrcB(SrcB), .ALUControl(ALUControl), .Zero(Zero), .ALUResult(ALUResult) );     //note between the () is the current module port
+   
     //inputs of PC_MUX
     wire    [31:0] PCPlus4;
     wire    [31:0] PCBranch;
     //output of PC_MUX
     wire    [31:0] PC_in;
-    //PC_MUX instantiation
-    MUX #(.WIDTH(32))   PC_MUX (.In1(PCPlus4), .In2(PCBranch), .sel(PCSrc), .Out(PC_in));            
 
     //PCPlus4
     Adder ADD1 (    .A(PC),
@@ -99,7 +96,10 @@ module DatapathUnit (
                     .B(PCPlus4),
                     .C(PCBranch)
                 );
-
+    
+    //PC_MUX instantiation
+    MUX #(.WIDTH(32))   PC_MUX (.In1(PCPlus4), .In2(PCBranch), .sel(PCSrc), .Out(PC_in));
+    
     //PC module
     ProgramCounter PC1 (.CLK(CLK), .reset(reset), .PC_in(PC_in), .PC(PC));
 
