@@ -12,16 +12,16 @@ module DatapathUnit (
     input   wire            ALUSrc,
     input   wire            RegDst,
     input   wire            RegWrite,   //WE3
-    input   wire    [2:0]   ALUControl,
-    input   wire            ReadData,
+    input   wire    [ 2:0]  ALUControl,
+    input   wire    [31:0]  ReadData,
 
-    output  reg     [31:0]  PC,
-    output  reg     [31:0]  ALUResult,
+    output  wire     [31:0]  PC,
+    output  wire     [31:0]  ALUResult,
     output  wire    [31:0]  WriteData,      
     output  wire            Zero
 
 );
-               
+          
 
     //inputs of register file
     wire            [ 4:0]   A1;
@@ -82,10 +82,12 @@ module DatapathUnit (
     wire    [31:0] PCBranch;
     //output of PC_MUX
     wire    [31:0] PC_in;
+    wire    [31:0] PC4;
+    assign PC4 = 32'b100;
 
     //PCPlus4
     Adder ADD1 (    .A(PC),
-                    .B(32'd4),
+                    .B(PC4),
                     .C(PCPlus4)
                 );
     //PCBranch input
@@ -105,7 +107,7 @@ module DatapathUnit (
     //outputs to PC_J_MUX
     wire    [31:0] PC_JIn;
 
-    assign PC_JUMP = {PCPlus4[31:28],Instr[25:0]<<2};
+    assign PC_JUMP = {PCPlus4[31:28],Instr[25:0]<<2,2'b00};
     
     //PC_J_MUX instantiation
     MUX #(.WIDTH(32))   PC_J_MUX (.In1(PC_in), .In2(PC_JUMP), .sel(Jmp), .Out(PC_JIn));

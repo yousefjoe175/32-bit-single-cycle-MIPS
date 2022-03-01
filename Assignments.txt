@@ -1,7 +1,0 @@
-
-You are supposed to implement:
-         1. ALU Module
-         2. Program Counter Module
-         3. Control Unit Module
-         4. Sign Extend Module
-         5. Adder Module

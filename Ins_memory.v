@@ -8,7 +8,7 @@ module Ins_memory(
 
 	initial 
 		begin
-			$readmemh("code.dat", mem);
+			$readmemh("Program 1_Machine Code.txt", mem);
 		end
 
 	always @(PC) 

@@ -33,5 +33,6 @@ module data_memory (
 		end
 
 //needs to add the test_value functionality
+assign test_value = data_mem[0];
 
 endmodule
