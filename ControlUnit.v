@@ -20,6 +20,8 @@ module ControlUnit
     localparam  branchIfEqual   = 6'b00_0100;
     localparam  jump_inst       = 6'b00_0010;
 
+    localparam  AND =   6'b10_0100;
+    localparam  OR  =   6'b10_0101;
     localparam  ADD =   6'b10_0000;
     localparam  SUB =   6'b10_0010;
     localparam  SLT =   6'b10_1010;
@@ -124,13 +126,15 @@ module ControlUnit
                2'b00    :   ALUControl  =   3'b010;
                2'b01    :   ALUControl  =   3'b100; 
                2'b10    :   
-                    begin
+                    begin       //adding the reset of ALU control signals
                         case (Funct)
-                            ADD :   ALUControl  =   3'b010;
-                            SUB :   ALUControl  =   3'b100;
-                            SLT :   ALUControl  =   3'b110;
-                            MUL :   ALUControl  =   3'b101;
-                            default: ALUControl =   3'b010;
+                            AND :       ALUControl  =   3'b000;
+                            OR  :       ALUControl  =   3'b001;
+                            ADD :       ALUControl  =   3'b010;
+                            SUB :       ALUControl  =   3'b100;
+                            SLT :       ALUControl  =   3'b110;
+                            MUL :       ALUControl  =   3'b101;
+                            default:    ALUControl  =   3'b010;
                         endcase
                     end
                default  :   ALUControl  =   3'b010;

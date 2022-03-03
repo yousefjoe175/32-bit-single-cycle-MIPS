@@ -1,5 +1,5 @@
 # vsim work.MIPS 
-# Start time: 17:57:19 on Mar 01,2022
+# Start time: 22:02:19 on Mar 03,2022
 # Loading work.MIPS
 # Loading work.ControlUnit
 # Loading work.DatapathUnit
@@ -14,8 +14,54 @@
 add wave -position insertpoint  \
 sim:/MIPS/CLK \
 sim:/MIPS/reset \
-sim:/MIPS/test_value \
-sim:/MIPS/Instr \
+sim:/MIPS/test_value
+add wave -position insertpoint  \
+sim:/MIPS/M2/mem
+add wave -position insertpoint  \
+sim:/MIPS/PC
+add wave -position insertpoint  \
+sim:/MIPS/Instr
+add wave -position insertpoint  \
+sim:/MIPS/ALUResult
+add wave -position insertpoint  \
+sim:/MIPS/ReadData \
+sim:/MIPS/WriteData
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+add wave -position insertpoint  \
+sim:/MIPS/D1/M1/regfile
+force -freeze sim:/MIPS/reset St1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog {E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:14:24 on Mar 03,2022
+# vlog -reportprogress 300 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v 
+# -- Compiling module Ins_memory
+# 
+# Top level modules:
+# 	Ins_memory
+# End time: 22:14:24 on Mar 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.Ins_memory
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+force -freeze sim:/MIPS/reset St1 0
+run
+run
+restart -f -nolist
+add wave -position insertpoint  \
 sim:/MIPS/Jmp \
 sim:/MIPS/MemtoReg \
 sim:/MIPS/PCSrc \
@@ -23,30 +69,172 @@ sim:/MIPS/ALUSrc \
 sim:/MIPS/RegDst \
 sim:/MIPS/RegWrite \
 sim:/MIPS/ALUControl \
-sim:/MIPS/MemWrite \
-sim:/MIPS/PC \
-sim:/MIPS/ALUResult \
-sim:/MIPS/ReadData \
-sim:/MIPS/WriteData \
-sim:/MIPS/Zero
+sim:/MIPS/MemWrite
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+run
+restart -f
 force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
 force -freeze sim:/MIPS/reset 0 0
 run
-force -freeze sim:/MIPS/reset 1 0
+force -freeze sim:/MIPS/reset St1 0
+add wave -position insertpoint  \
+sim:/MIPS/D1/M1/WD3
+add wave -position insertpoint  \
+sim:/MIPS/D1/M1/RD1 \
+sim:/MIPS/D1/M1/RD2
+restart -f
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+force -freeze sim:/MIPS/reset St1 0
+run
+add wave -position insertpoint  \
+sim:/MIPS/D1/M1/A3
+add wave -position insertpoint  \
+sim:/MIPS/D1/M1/A1 \
+sim:/MIPS/D1/M1/A2
+restart -f
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+force -freeze sim:/MIPS/reset St1 0
 run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 19:38:17 on Mar 01,2022, Elapsed time: 1:40:58
+vlog {E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/DatapathUnit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:06 on Mar 03,2022
+# vlog -reportprogress 300 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/DatapathUnit.v 
+# -- Compiling module DatapathUnit
+# 
+# Top level modules:
+# 	DatapathUnit
+# End time: 22:34:06 on Mar 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+restart -f
+# Loading work.DatapathUnit
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+force -freeze sim:/MIPS/reset St1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/MIPS/M1/data_mem
+run
+restart -f
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+force -freeze sim:/MIPS/reset St1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog {E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/data_memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:07:24 on Mar 03,2022
+# vlog -reportprogress 300 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/data_memory.v 
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 23:07:24 on Mar 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.data_memory
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+restart -f
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+run
+vlog {E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/MIPS.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:11:33 on Mar 03,2022
+# vlog -reportprogress 300 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/MIPS.v 
+# -- Compiling module MIPS
+# 
+# Top level modules:
+# 	MIPS
+# End time: 23:11:33 on Mar 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.MIPS
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+force -freeze sim:/MIPS/reset St1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog {E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/DatapathUnit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:16:44 on Mar 03,2022
+# vlog -reportprogress 300 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/DatapathUnit.v 
+# -- Compiling module DatapathUnit
+# 
+# Top level modules:
+# 	DatapathUnit
+# End time: 23:16:44 on Mar 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.DatapathUnit
+force -freeze sim:/MIPS/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/MIPS/reset 0 0
+run
+force -freeze sim:/MIPS/reset St1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

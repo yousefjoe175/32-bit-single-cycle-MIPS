@@ -51,13 +51,13 @@ r1
 R3
 n@a@l@u
 vControlUnit
-!s110 1645968581
+!s110 1646337691
 !i10b 1
-!s100 V0AKOn:9^Ln_:fzGSG;ZG2
-IYKdRADeM;I;U0W<JDL`]>0
+!s100 <9U[9Cnl>a2RfOY4WA4XA0
+IL=LzO;gGB[_Ac<m2TZYXm1
 R1
 R0
-w1645968577
+w1646337680
 8.\ControlUnit.v
 F.\ControlUnit.v
 L0 1
@@ -65,92 +65,92 @@ R2
 r1
 !s85 0
 31
-!s108 1645968581.000000
+!s108 1646337691.000000
 !s107 .\ControlUnit.v|
 !s90 .\ControlUnit.v|
 !i113 1
 R3
 n@control@unit
 vdata_memory
-!s110 1646150205
+!s110 1646341644
 !i10b 1
-!s100 5O[BhMd=6[4^>fRQm>8;33
-Il^UTkGWVG;RY6@3kY2aLh1
+!s100 gWZ5NfiKlHCbPdbPhhldK2
+I2=dTLLnE_N<fBd`Gn5hLL0
 R1
 R0
-w1646129555
-8.\data_memory.v
-F.\data_memory.v
+w1646341619
+8E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/data_memory.v
+FE:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/data_memory.v
 L0 1
 R2
 r1
 !s85 0
 31
-!s108 1646150205.000000
-!s107 .\data_memory.v|
-!s90 .\data_memory.v|
+!s108 1646341644.000000
+!s107 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/data_memory.v|
+!s90 -reportprogress|300|E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/data_memory.v|
 !i113 1
 R3
 vDatapathUnit
-!s110 1646150209
+!s110 1646342204
 !i10b 1
-!s100 EPmN@k];`R[TVE;VD79z13
-IUZP1lY=>F@akD0DGPF97K1
+!s100 14bdS541eKb?heM>XBKK91
+ISX0D39Y]9FAb@B8m1UK001
 R1
 R0
-w1646146092
-8.\DatapathUnit.v
-F.\DatapathUnit.v
+w1646342186
+8E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/DatapathUnit.v
+FE:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/DatapathUnit.v
 L0 5
 R2
 r1
 !s85 0
 31
-!s108 1646150209.000000
-!s107 .\DatapathUnit.v|
-!s90 .\DatapathUnit.v|
+!s108 1646342204.000000
+!s107 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/DatapathUnit.v|
+!s90 -reportprogress|300|E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/DatapathUnit.v|
 !i113 1
 R3
 n@datapath@unit
 vIns_memory
-!s110 1646150217
+!s110 1646338464
 !i10b 1
-!s100 ^>c0c0i6[MZdJE5fd>koP1
-I?Ug3Q<cQ81@?<QUK^4V101
+!s100 7BdVPo25KSKBXlGUM65l63
+IXSSM3n?CHLYchQkRM7^Q;2
 R1
 R0
-w1646149339
-8.\Ins_memory.v
-F.\Ins_memory.v
+w1646338432
+8E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v
+FE:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v
 L0 1
 R2
 r1
 !s85 0
 31
-!s108 1646150217.000000
-!s107 .\Ins_memory.v|
-!s90 .\Ins_memory.v|
+!s108 1646338464.000000
+!s107 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v|
+!s90 -reportprogress|300|E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v|
 !i113 1
 R3
 n@ins_memory
 vMIPS
-!s110 1646150223
+!s110 1646341893
 !i10b 1
-!s100 B^PfBgkc:d=Dmj0ibB@Ne1
-I3P1:f>5MmC_`eJ8^9dD@20
+!s100 Uk7T0?PF:WOh25bSGVLNT2
+I4Qd58Z2]E4<:H]DPTFL`U2
 R1
 R0
-w1646149853
-8.\MIPS.v
-F.\MIPS.v
+w1646341884
+8E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/MIPS.v
+FE:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/MIPS.v
 L0 5
 R2
 r1
 !s85 0
 31
-!s108 1646150223.000000
-!s107 .\MIPS.v|
-!s90 .\MIPS.v|
+!s108 1646341893.000000
+!s107 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/MIPS.v|
+!s90 -reportprogress|300|E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/MIPS.v|
 !i113 1
 R3
 n@m@i@p@s

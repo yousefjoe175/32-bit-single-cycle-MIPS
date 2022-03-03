@@ -58,7 +58,7 @@ data_memory M1 (
     .A(ALUResult),          
 	.WD(WriteData),
     .CLK(CLK),
-	.reset(CLK),
+	.reset(reset),
 	.WE(MemWrite),
     .RD(ReadData),
 	.test_value(test_value)

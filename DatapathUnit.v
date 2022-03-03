@@ -43,7 +43,7 @@ module DatapathUnit (
                         .A2(A2),
                         .A3(A3),
                         .CLK(CLK), 
-                        .WE3(WE3),
+                        .WE3(RegWrite),
                         .reset(reset)
     );
 
@@ -106,8 +106,9 @@ module DatapathUnit (
     wire    [31:0] PC_JUMP;
     //outputs to PC_J_MUX
     wire    [31:0] PC_JIn;
-
-    assign PC_JUMP = {PCPlus4[31:28],Instr[25:0]<<2,2'b00};
+    wire [27:0] JUMP_IMM;
+    assign JUMP_IMM = Instr[25:0];
+    assign PC_JUMP = {PCPlus4[31:28],JUMP_IMM<<2};
     
     //PC_J_MUX instantiation
     MUX #(.WIDTH(32))   PC_J_MUX (.In1(PC_in), .In2(PC_JUMP), .sel(Jmp), .Out(PC_JIn));

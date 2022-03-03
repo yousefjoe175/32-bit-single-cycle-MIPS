@@ -18,7 +18,7 @@ module data_memory (
 
 	always @(posedge CLK, negedge reset) 
 		begin
-			if(~reset) 
+			if(!reset) 
 				begin
 					for(k = 0; k < MEMORY_SIZE; k = k + 1) 
 						begin
