@@ -50,6 +50,26 @@ r1
 !i113 1
 R3
 n@a@l@u
+vclock_divider
+!s110 1646751135
+!i10b 1
+!s100 g2PJK3bGGQJD>HFaHc6g?3
+ICAQRk;Bn:Lo5<;Y9gKEUI2
+R1
+R0
+w1646703558
+8.\clock_divider.v
+F.\clock_divider.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1646751135.000000
+!s107 .\clock_divider.v|
+!s90 .\clock_divider.v|
+!i113 1
+R3
 vControlUnit
 !s110 1646337691
 !i10b 1
@@ -112,24 +132,44 @@ r1
 !i113 1
 R3
 n@datapath@unit
-vIns_memory
-!s110 1646338464
+vdig_pointer
+!s110 1646751144
 !i10b 1
-!s100 7BdVPo25KSKBXlGUM65l63
-IXSSM3n?CHLYchQkRM7^Q;2
+!s100 m02dUgFlYQNUozkc5eZF@2
+IeMHGR6>g=nS<SEY8fCl=h3
 R1
 R0
-w1646338432
-8E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v
-FE:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v
+w1644972670
+8.\dig_pointer.v
+F.\dig_pointer.v
 L0 1
 R2
 r1
 !s85 0
 31
-!s108 1646338464.000000
-!s107 E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v|
-!s90 -reportprogress|300|E:/Courses/Digital/IEEE/Final Project/32-bit-single-cycle-MIPS/Ins_memory.v|
+!s108 1646751143.000000
+!s107 .\dig_pointer.v|
+!s90 .\dig_pointer.v|
+!i113 1
+R3
+vIns_memory
+!s110 1646754671
+!i10b 1
+!s100 ^>c0c0i6[MZdJE5fd>koP1
+I?Ug3Q<cQ81@?<QUK^4V101
+R1
+R0
+w1646754662
+8.\Ins_memory.v
+F.\Ins_memory.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1646754671.000000
+!s107 .\Ins_memory.v|
+!s90 .\Ins_memory.v|
 !i113 1
 R3
 n@ins_memory
@@ -217,6 +257,26 @@ r1
 !i113 1
 R3
 n@register_file
+vseg_disp
+!s110 1646751157
+!i10b 1
+!s100 0ZeKW`3OzidFBS9a`eOPJ2
+I3Zl1MWN6P@U=giOg[K9Za2
+R1
+R0
+w1644973630
+8.\seg_disp.v
+F.\seg_disp.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1646751157.000000
+!s107 .\seg_disp.v|
+!s90 .\seg_disp.v|
+!i113 1
+R3
 vSignExtend
 !s110 1645968680
 !i10b 1
@@ -238,3 +298,23 @@ r1
 !i113 1
 R3
 n@sign@extend
+vtop_module
+!s110 1646751166
+!i10b 1
+!s100 J2B_7U<QgJ2dIm92@0SV]1
+I?LO:]>hY8mKS6H2P9SO9h1
+R1
+R0
+w1646751115
+8.\top_module.v
+F.\top_module.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1646751166.000000
+!s107 .\top_module.v|
+!s90 .\top_module.v|
+!i113 1
+R3

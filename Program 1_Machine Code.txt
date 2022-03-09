@@ -1,4 +1,4 @@
-// This Machine Code Calculates the GCD of two Numbers
+// This Machine Code Calculates the GCD of two Numbers 180 and 120
 // In Hexadecimal Number
 00008020
 20100078                   // change the least two significant decimals with the first number in hexadecimal format
